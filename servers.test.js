@@ -17,7 +17,9 @@ describe("Servers test (with setup and tear-down)", function() {
     expect(serverId).toEqual(1)
   });
 
-  it('should ', function () {
+  it('serverTbody should not be empty', function () {
+    updateServerTable();
+    expect(serverTbody).not.toEqual('');
   });
 
   afterEach(function() {
