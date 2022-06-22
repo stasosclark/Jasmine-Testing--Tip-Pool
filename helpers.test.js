@@ -21,6 +21,11 @@ describe("Helpers test (with setup and tear-down)", function() {
     submitPaymentInfo()
     expect(paymentTbody.innerHTML).toContain('td');
   });
+
+  it('should create delete button', function() {
+    submitPaymentInfo();
+    expect(paymentTbody.innerHTML).toContain('X');
+  });
   
     afterEach(function() {
       billAmtInput.value = '';
